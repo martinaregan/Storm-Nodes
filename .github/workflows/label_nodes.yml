@@ -1,0 +1,39 @@
+name: Node Labeling Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  label_nodes:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt  # Install any required dependencies
+
+    - name: Run Node Labeling Script
+      run: |
+        python label_nodes.py "${{ github.event.pull_request.title }}"  # or use other inputs such as the PR body
+
+    - name: Apply label based on node label
+      run: |
+        # Get the label result from the previous step and apply it using GitHub API or Actions.
+        LABEL=$(python label_nodes.py "${{ github.event.pull_request.title }}")
+        echo "Applying label: $LABEL"
+        gh pr edit ${{ github.event.pull_request.number }} --add-label "$LABEL"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
