@@ -1,0 +1,332 @@
+set cut_paste_input [stack 0]
+version 13.2 v6
+StickyNote {
+ inputs 0
+ name StickyNote7
+ tile_color 0x969600ff
+ label "<b>https://www.youtube.com/watch?v=Uey7gCjlMzw&t=120s&ab_channel=LalitDesai        ."
+ note_font_size 20
+ selected true
+ xpos 31208
+ ypos 3181
+}
+StickyNote {
+ inputs 0
+ name StickyNote8
+ tile_color 0x335959ff
+ label "<b>author:Lalit Desai"
+ note_font_size 20
+ selected true
+ xpos 31209
+ ypos 3108
+}
+Camera2 {
+ inputs 0
+ translate {0.36722574 1.42121677 15.36391563}
+ rotate {2.32199666 1.600003616 0}
+ name Camera3
+ selected true
+ xpos 30057
+ ypos 2744
+}
+set N7c1c8100 [stack 0]
+Radial {
+ inputs 0
+ area {512 220 1536 1167}
+ color {1.5 0.722006 0.210874 1}
+ color_panelDropped true
+ name Radial4
+ selected true
+ xpos 30461
+ ypos 2397
+}
+Radial {
+ inputs 0
+ area {724.2625866 401.7381451 1323.737413 985.2618549}
+ color {1.5 0.722006 0.210874 1}
+ color_panelDropped true
+ name Radial5
+ selected true
+ xpos 30327
+ ypos 2260
+}
+Radial {
+ inputs 0
+ area {512 220 1536 1167}
+ color {1.5 0.722006 0.210874 1}
+ color_panelDropped true
+ name Radial6
+ selected true
+ xpos 30474
+ ypos 2175
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Merge3
+ label "\[ expr \{ \[value mix] == 1 ? \" \" : \[value mix] \}]"
+ selected true
+ xpos 30474
+ ypos 2260
+}
+Cylinder {
+ inputs 0
+ columns 60
+ height 0
+ name Cylinder2
+ selected true
+ xpos 30803
+ ypos 2184
+}
+TransformGeo {
+ translate {0 2.454999924 1.073113367e-07}
+ rotate {90 0 0}
+ uniform_scale 1.8
+ name TransformGeo12
+ selected true
+ xpos 30803
+ ypos 2266
+}
+push 0
+ParticleEmitter {
+ inputs 4
+ emit_from edges
+ randomize_type "randomized direction"
+ rate 50
+ rate_variation 0.255
+ lifetime 35
+ velocity 0
+ rotation_velocity 0.028
+ size 0.04
+ spread 1
+ name ParticleEmitter2
+ selected true
+ xpos 30803
+ ypos 2397
+}
+ParticleTurbulence {
+ strength {{strength.z} {strength.z} 0.1}
+ name ParticleTurbulence2
+ selected true
+ xpos 30803
+ ypos 2449
+}
+ParticleGravity {
+ to {0.021 -0.03 0}
+ name ParticleGravity3
+ selected true
+ xpos 30803
+ ypos 2519
+}
+ParticleWind {
+ to {0.2 0 0}
+ name ParticleWind1
+ selected true
+ xpos 30803
+ ypos 2570
+}
+ParticleBounce {
+ out_bounce 0.21
+ out_friction 0.37
+ in_bounce 0.425
+ in_friction 0.36
+ bounceaxis_uniform_scale 17
+ name ParticleBounce2
+ selected true
+ xpos 30803
+ ypos 2648
+}
+push 0
+ScanlineRender {
+ inputs 3
+ conservative_shader_sampling false
+ samples 40
+ shutter 0.21
+ shutteroffset centred
+ motion_vectors_type distance
+ name ScanlineRender3
+ selected true
+ xpos 30803
+ ypos 2765
+}
+Glow2 {
+ brightness 1.54
+ size 18
+ name Glow2
+ selected true
+ xpos 30803
+ ypos 2875
+}
+Dot {
+ name Dot9
+ selected true
+ xpos 30836
+ ypos 3188
+}
+push $N7c1c8100
+Radial {
+ inputs 0
+ area {512 220 1536 1167}
+ color {1.5 0.722006 0.210874 1}
+ color_panelDropped true
+ name Radial3
+ selected true
+ xpos 29039
+ ypos 2584
+}
+Radial {
+ inputs 0
+ area {724.2625866 401.7381451 1323.737413 985.2618549}
+ color {1.5 0.722006 0.210874 1}
+ color_panelDropped true
+ name Radial2
+ selected true
+ xpos 28905
+ ypos 2447
+}
+Radial {
+ inputs 0
+ area {512 220 1536 1167}
+ color {1.5 0.722006 0.210874 1}
+ color_panelDropped true
+ name Radial1
+ selected true
+ xpos 29052
+ ypos 2362
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Merge4
+ label "\[ expr \{ \[value mix] == 1 ? \" \" : \[value mix] \}]"
+ selected true
+ xpos 29052
+ ypos 2447
+}
+Cylinder {
+ inputs 0
+ columns 60
+ height 0
+ name Cylinder1
+ selected true
+ xpos 29381
+ ypos 2371
+}
+TransformGeo {
+ translate {0 2.220000029 9.703926196e-08}
+ rotate {90 0 0}
+ uniform_scale 1.8
+ name TransformGeo13
+ selected true
+ xpos 29381
+ ypos 2453
+}
+push 0
+ParticleEmitter {
+ inputs 4
+ emit_from edges
+ randomize_type "randomized direction"
+ rate 100
+ rate_variation 0.255
+ lifetime 15
+ velocity 0.042
+ size 0.04
+ transfer_velocity 1
+ spread 1
+ name ParticleEmitter3
+ selected true
+ xpos 29381
+ ypos 2584
+}
+TransformGeo {
+ rotate {0 0 {frame*20}}
+ pivot_translate {0 2.1 0}
+ name TransformGeo14
+ selected true
+ xpos 29381
+ ypos 2679
+}
+push 0
+ScanlineRender {
+ inputs 3
+ conservative_shader_sampling false
+ samples 40
+ shutter 0.68
+ shutteroffset centred
+ motion_vectors_type distance
+ name ScanlineRender4
+ selected true
+ xpos 29381
+ ypos 2765
+}
+Saturation {
+ saturation 1.4
+ name Saturation1
+ selected true
+ xpos 29381
+ ypos 2878
+}
+Glow2 {
+ brightness 1.54
+ size 18
+ name Glow1
+ selected true
+ xpos 29381
+ ypos 2939
+}
+set N31d16930 [stack 0]
+Dot {
+ name Dot14
+ selected true
+ xpos 29414
+ ypos 3109
+}
+push $N31d16930
+Blur {
+ channels rgba
+ size 100
+ name Blur1
+ label "\[value size]"
+ selected true
+ xpos 29739
+ ypos 2933
+}
+ColorCorrect {
+ saturation 2
+ gain 1.2
+ name ColorCorrect3
+ selected true
+ xpos 29739
+ ypos 2969
+}
+push $cut_paste_input
+Reformat {
+ name Reformat1
+ selected true
+ xpos 30044
+ ypos 2846
+}
+Merge2 {
+ inputs 2
+ name Merge5
+ label "\[ expr \{ \[value mix] == 1 ? \" \" : \[value mix] \}]"
+ selected true
+ xpos 30044
+ ypos 2969
+}
+Merge2 {
+ inputs 2
+ name Merge6
+ label "\[ expr \{ \[value mix] == 1 ? \" \" : \[value mix] \}]"
+ selected true
+ xpos 30044
+ ypos 3107
+}
+Merge2 {
+ inputs 2
+ name Merge7
+ label "\[ expr \{ \[value mix] == 1 ? \" \" : \[value mix] \}]"
+ selected true
+ xpos 30044
+ ypos 3186
+}
